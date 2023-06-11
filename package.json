@@ -1,0 +1,19 @@
+{
+  "name": "tabbit-game",
+  "version": "1.0.0",
+  "description": "This is a simple project using Tailwind and css animatiions",
+  "main": "index.js",
+  "scripts": {
+    "css:dev": "npx tailwindcss -i ./src/css/index.css -o ./src/css/output.css --watch --minify"
+  },
+  "keywords": [
+    "game",
+    "ui",
+    "tailwind"
+  ],
+  "author": "jsmarenco",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "3.3.2"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./src/css/output.css" rel="stylesheet" />
+    <title>Rabbit game</title>
+  </head>
+  <body class="bg-black sm:bg-white w-screen h-screen overflow-hidden flex items-center justify-center">
+    <div class="relative bg-white shadow-2xl shadow-gray-700 border-8 rounded-3xl border-black w-80 h-[600px] overflow-hidden">
+      <h1 class="flex justify-center items-center m-[42px] mb-2">
+        <img src="./src/assets/title.svg" alt="Animationland">
+      </h1>
+      <h2 class="score text-center">Score: </h2>
+
+      <!-- Rabbit -->
+      <div class="rabbit rabbit-1 absolute z-[2] w-16 h-[450px] bottom-0 left-20">
+        <input type="checkbox" class="absolute opacity-0 w-16 h-[58px] cursor-pointer z-[2]">
+
+        <div class="rabbit__ear-outer absolute left-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-inner absolute left-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__ear-inner absolute right-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-outer absolute right-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__head absolute top-8 bg-white rounded-full w-full h-14 left-0 right-0 mx-auto">
+          <div class="rabbit__eye absolute bg-black left-5 top-[10px] rounded-full w-1 h-1"></div>
+          <div class="rabbit__eye absolute bg-black right-5 top-[10px] rounded-full w-1 h-1"></div>
+        </div>
+      </div>
+
+    
+      <!-- Rabiit -->
+      <div class="rabbit rabbit-2 absolute z-[2] w-16 h-[450px] bottom-0 right-20">
+        <input type="checkbox" class="absolute opacity-0 w-16 h-[58px] cursor-pointer z-[2]">
+
+        <div class="rabbit__ear-outer absolute left-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-inner absolute left-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__ear-inner absolute right-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-outer absolute right-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__head absolute top-8 bg-white rounded-full w-full h-14 left-0 right-0 mx-auto">
+          <div class="rabbit__eye absolute bg-black left-5 top-[10px] rounded-full w-1 h-1"></div>
+          <div class="rabbit__eye absolute bg-black right-5 top-[10px] rounded-full w-1 h-1"></div>
+        </div>
+      </div>
+
+      <!-- Wall -->
+      <div class="wall absolute z-[3] w-10/12 h-[400px] bg-slate-400 bottom-0 right-0 left-0 mx-auto rounded-tr-2xl rounded-tl-2xl">
+        <div class="lawn right-0 left-0 mx-auto"></div>
+        <div class="land right-0 left-0 mx-auto"></div>
+      </div>
+
+      <!-- Rabiit -->
+      <div class="rabbit rabbit-3 absolute z-[4] w-16 h-[350px] bottom-0 left-8">
+        <input type="checkbox" class="absolute opacity-0 w-16 h-[58px] cursor-pointer z-[2]">
+
+        <div class="rabbit__ear-outer absolute left-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-inner absolute left-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__ear-inner absolute right-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-outer absolute right-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__head absolute top-8 bg-white rounded-full w-full h-14 left-0 right-0 mx-auto">
+          <div class="rabbit__eye absolute bg-black left-5 top-[10px] rounded-full w-1 h-1"></div>
+          <div class="rabbit__eye absolute bg-black right-5 top-[10px] rounded-full w-1 h-1"></div>
+        </div>
+      </div>
+
+      <!-- Wall -->
+      <div class="wall absolute z-[5] w-7/12 h-[300px] bg-slate-500 bottom-0 left-0 rounded-tr-2xl rounded-tl-2xl">
+        <div class="lawn right-0 left-0 mx-auto"></div>
+        <div class="land right-0 left-0 mx-auto"></div>
+      </div>
+
+      <!-- Rabiit -->
+      <div class="rabbit rabbit-4 absolute z-[6] w-16 h-[250px] bottom-0 right-8">
+        <input type="checkbox" class="absolute opacity-0 w-16 h-[58px] cursor-pointer z-[2]">
+
+        <div class="rabbit__ear-outer absolute left-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-inner absolute left-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__ear-inner absolute right-2 bg-gray-200 rounded-[90%] w-[20px] h-14"></div>
+        <div class="rabbit__ear-outer absolute right-[12px] top-2 bg-gray-400 rounded-[90%] w-[12px] h-14"></div>
+        <div class="rabbit__head absolute top-8 bg-white rounded-full w-full h-14 left-0 right-0 mx-auto">
+          <div class="rabbit__eye absolute bg-black left-5 top-[10px] rounded-full w-1 h-1"></div>
+          <div class="rabbit__eye absolute bg-black right-5 top-[10px] rounded-full w-1 h-1"></div>
+        </div>
+      </div>
+
+      <!-- Wall -->
+      <div class="wall absolute z-[7] w-8/12 bg-gray-500 shadow-[40px] h-[200px] bottom-0 right-0 rounded-tr-2xl rounded-tl-2xl">
+        <div class="lawn right-0 left-0 mx-auto"></div>
+        <div class="land right-0 left-0 mx-auto"></div>
+      </div>
+
+      <!-- Cloud -->
+      <div class="layer-8 absolute z-[8] w-[200px] h-[120px] bottom-0 right-0 left-0 mx-auto">
+        <div class="absolute bottom-0 rounded-tl-[40px] rounded-tr-[40px] bg-gray-400 w-[80px] left-[0px] h-[70%] inline-block"></div>
+        <div class="absolute bottom-0 rounded-tl-[40px] rounded-tr-[40px] bg-gray-400 w-[80px] left-[60px] h-[100%] inline-block"></div>
+        <div class="absolute bottom-0 rounded-tl-[40px] rounded-tr-[40px] bg-gray-400 w-[80px] left-[120px] h-[80%] inline-block"></div>
+      </div>
+
+      <!-- Cloud -->
+      <div class="layer-10 absolute z-[10] w-5/12 h-[100px] bottom-0 left-0 flex items-end justify-start">
+        <div class="cloud bg-gray-200 w-9/12 h-full rounded-tr-[48px] rounded-tl-[48px]"></div>
+        <div class="cloud bg-gray-200 w-5/12 h-16 rounded-br-[48px] rounded-tr-[48px]"></div>
+      </div>
+
+      <!-- Cloud -->
+      <div class="layer-10 absolute z-[10] w-4/12 h-[100px] bottom-0 right-0 flex items-baseline justify-end">
+        <div class="cloud bg-gray-200 w-5/12 h-16 rounded-bl-[48px] rounded-tl-[48px]"></div>
+        <div class="cloud bg-gray-200 w-9/12 h-full rounded-tl-[48px] rounded-tr-[48px]"></div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-brown: #a54a38;
+  --light-brown: #bf624c;
+  --dark-green: #51af5e;
+  --light-green: #51af5e;
+  --shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+body {
+  counter-reset: score;
+}
+
+.wall {
+  box-shadow: 0px 21px 30px 10px rgba(0, 0, 0, 0.5);
+  background: var(--light-brown);
+  overflow: hidden;
+}
+
+.rabbit input:checked {
+  counter-increment: score;
+}
+
+.score::after {
+  content: counter(score);
+}
+
+.lawn {
+  background: var(--dark-green);
+  height: 20px;
+  width: 100%;
+}
+
+.land {
+  background: linear-gradient(135deg, var(--dark-green) 25%, transparent 25%) -50px
+      0,
+    linear-gradient(-135deg, var(--dark-green) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, var(--light-brown) 25%, transparent 25%),
+    linear-gradient(-45deg, transparent 25%, var(--dark-brown) 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
+
+.rabbit,
+.rabbit-1,
+.rabbit-2,
+.rabbit-3,
+.rabbit-4 {
+  animation-name: rabbit;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  animation-iteration-count: infinite;
+}
+
+.rabbit-1 {
+  animation-duration: 0.1s;
+}
+.rabbit-2 {
+  animation-duration: 0.3s;
+}
+.rabbit-3 {
+  animation-duration: 0.2s;
+}
+.rabbit-4 {
+  animation-duration: 0.1.5s;
+}
+
+.rabbit__eye {
+  animation-name: rabbit_eye;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rabbit_eye {
+  0% {
+    height: 4px;
+  }
+
+  5% {
+    transform: translate(0px, 2px);
+    height: 1px;
+  }
+
+  10% {
+    transform: translate(0px, 0px);
+    height: 4px;
+  }
+}
+
+@keyframes rabbit {
+  0% {
+    bottom: 0;
+  }
+
+  25% {
+    bottom: -80px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
